@@ -15,17 +15,18 @@ HTML element namespace URI
 ## Usage
 
 ```js
-var htmlNamespace = require('@f/html-namespace')
+var htmlNs = require('@f/html-namespace')
+var svgNs = require('@f/svg-namespace')
 
+function elementType (node) {
+  switch (node.namespaceURI) {
+    case htmlNs:
+      return 'html'
+    case svgNs:
+      return 'svg'
+  }
+}
 ```
-
-## API
-
-### htmlNamespace(arg)
-
-- `arg` -
-
-**Returns:**
 
 ## License
 
